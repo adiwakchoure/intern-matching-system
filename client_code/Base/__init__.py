@@ -35,9 +35,20 @@ class Base(BaseTemplate):
       self.markdown.content = "Please Enter your Details."
     else:
     # if self.name_box.text is not None and self.name_box.text is not None:
-      attributes = anvil.server.call('process_candidate', self.name_box.text, uploaded_file)
+      processed_data = anvil.server.call('process_candidate', self.name_box.text, uploaded_file)
+    # Add the processed data to the 'Candidates' data table
+      app_tables.all_candidates.add_row(
+        name=processed_data.get('name', ''),
+        passout=int(processed_data.get('passout', '')),
+        uid=processed_data.get('uid', ''),
+        university=processed_data.get('university', ''),
+        grades=float(processed_data.get('grades', 0)),
+        resume = uploaded_file,
+        skills=processed_data.get('skills', '[]'),  # Store as a JSON string
+        domain=processed_data.get('domain', '[]')  # Store as a JSON string
+      )
+      print(processed_data)
       self.markdown.content = "Submitted!"
-      print(attributes)
   
   def resume_change(self, file, **event_args):
     """This method is called when a new file is loaded into this FileLoader"""

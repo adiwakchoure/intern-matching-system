@@ -51,7 +51,7 @@ db_schema:
     columns: []
     title: Projects
   all_candidates:
-    client: none
+    client: full
     server: full
     columns:
     - name: name
@@ -63,6 +63,21 @@ db_schema:
     - name: grades
       type: number
       admin_ui: {width: 200, order: 2}
+    - name: passout
+      type: number
+      admin_ui: {width: 200, order: 4}
+    - name: uid
+      type: string
+      admin_ui: {width: 200, order: 5}
+    - name: resume
+      type: media
+      admin_ui: {width: 200, order: 6}
+    - name: skills
+      admin_ui: {order: 7, width: 200}
+      type: simpleObject
+    - name: domain
+      type: simpleObject
+      admin_ui: {width: 200, order: 8}
     title: All_Candidates
 uplink_visible: true
 renamed: true

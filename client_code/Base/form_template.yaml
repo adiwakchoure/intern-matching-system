@@ -62,6 +62,10 @@ components:
     properties: {}
     name: markdown
     layout_properties: {grid_position: 'LZLVMH,DJQZTF'}
+  - type: Label
+    properties: {}
+    name: shortlist
+    layout_properties: {grid_position: 'KCMGDH,ONOVMB'}
 - type: FlowPanel
   properties: {}
   name: navbar_links
