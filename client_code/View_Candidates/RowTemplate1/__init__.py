@@ -1,4 +1,4 @@
-open_form('Admin')from ._anvil_designer import View_CandidatesTemplate
+from ._anvil_designer import RowTemplate1Template
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -8,12 +8,9 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 
-class View_Candidates(View_CandidatesTemplate):
+class RowTemplate1(RowTemplate1Template):
   def __init__(self, **properties):
+    # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
-
-  def admin_view_click(self, **event_args):
-    open_form('Admin')open_form('Admin')
-

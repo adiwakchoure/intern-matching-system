@@ -35,8 +35,9 @@ class Base(BaseTemplate):
       self.markdown.content = "Please Enter your Details."
     else:
     # if self.name_box.text is not None and self.name_box.text is not None:
-      anvil.server.call('process_candidate', self.name_box.text, uploaded_file)
+      attributes = anvil.server.call('process_candidate', self.name_box.text, uploaded_file)
       self.markdown.content = "Submitted!"
+      print(attributes)
   
   def resume_change(self, file, **event_args):
     """This method is called when a new file is loaded into this FileLoader"""

@@ -50,5 +50,19 @@ db_schema:
     server: full
     columns: []
     title: Projects
+  all_candidates:
+    client: none
+    server: full
+    columns:
+    - name: name
+      type: string
+      admin_ui: {width: 200, order: 0}
+    - name: university
+      type: string
+      admin_ui: {width: 200, order: 1}
+    - name: grades
+      type: number
+      admin_ui: {width: 200, order: 2}
+    title: All_Candidates
 uplink_visible: true
 renamed: true
