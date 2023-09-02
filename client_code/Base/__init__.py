@@ -23,15 +23,17 @@ class Base(BaseTemplate):
   def admin_view_click(self, **event_args):
     user = anvil.users.login_with_form()
     if user is not None and user['confirmed_email']:
-          open_form('Admin')
+      open_form('Admin')
 
   def submit_click(self, **event_args):
     uploaded_file = self.resume.file
     if uploaded_file is not None:
     # Call the server function and pass the uploaded file
       print("Sending")
-      self.markdown.content = anvil.server.call('process_pdf', uploaded_file)
-
+      response = anvil.server.call('process_pdf', uploaded_file)
+      print(response)
+      self.markdown.content = response["university"]
+  
   def resume_change(self, file, **event_args):
     """This method is called when a new file is loaded into this FileLoader"""
     pass
