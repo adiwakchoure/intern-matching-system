@@ -20,17 +20,10 @@ class Base(BaseTemplate):
 
     # Any code you write here will run before the form opens.
 
-
-  # def button_2_click(self, **event_args):
-  #   prompt = "How many in a dozen?"  # Replace with the actual name or variable
-  #   result = anvil.server.call('openai_call', prompt)
-  #   self.text_box_1.text = result
-  #   #open_form('Prof')
-
   def admin_view_click(self, **event_args):
     user = anvil.users.login_with_form()
     if user is not None and user['confirmed_email']:
-      open_form('Admin')
+          open_form('Admin')
 
   def submit_click(self, **event_args):
     uploaded_file = self.resume.file
@@ -43,11 +36,3 @@ class Base(BaseTemplate):
     """This method is called when a new file is loaded into this FileLoader"""
     pass
 
-
-
-
-
-
-
-
-    

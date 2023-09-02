@@ -24,6 +24,8 @@ class Admin(AdminTemplate):
   def view_candidates_click(self, **event_args):
     open_form('View_Candidates')
 
+  def admin_view_click(self, **event_args):
+    open_form('Base')
 
 
 

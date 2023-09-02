@@ -14,3 +14,6 @@ class Add_Projects(Add_ProjectsTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
+
+  def admin_view_click(self, **event_args):
+    open_form('Admin')
