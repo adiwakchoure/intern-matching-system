@@ -75,9 +75,9 @@ db_schema:
     - name: skills
       admin_ui: {order: 7, width: 200}
       type: simpleObject
-    - name: domain
+    - name: domains
+      admin_ui: {order: 8, width: 200}
       type: simpleObject
-      admin_ui: {width: 200, order: 8}
     title: All_Candidates
 uplink_visible: true
 renamed: true

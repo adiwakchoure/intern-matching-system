@@ -45,7 +45,7 @@ class Base(BaseTemplate):
         grades=float(processed_data.get('grades', 0)),
         resume = uploaded_file,
         skills=processed_data.get('skills', '[]'),  # Store as a JSON string
-        domain=processed_data.get('domain', '[]')  # Store as a JSON string
+        domains=processed_data.get('domains', '[]')  # Store as a JSON string
       )
       print(processed_data)
       self.markdown.content = "Submitted!"
