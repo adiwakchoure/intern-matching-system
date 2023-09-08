@@ -14,14 +14,28 @@ components:
       icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
       underline: false, icon: ''}
     name: name_label
-    layout_properties: {grid_position: 'IXTIGZ,JBEQBS'}
+    layout_properties: {grid_position: 'ZXWEJI,XLUPJJ'}
   - type: TextBox
     properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: Enter Your Name,
       border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
       font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
       background: '', bold: false, underline: false}
     name: name_box
-    layout_properties: {grid_position: 'XUNCRR,RDBVJT'}
+    layout_properties: {grid_position: 'WSRCKQ,GDAEYG'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: E-mail, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: email_label
+    layout_properties: {grid_position: 'SDPNHN,MGQHPX'}
+  - type: TextBox
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: Enter Your E-mail,
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false}
+    name: email_box
+    layout_properties: {grid_position: 'SSHYVU,XJUJOD'}
   - type: FileLoader
     properties:
       role: null

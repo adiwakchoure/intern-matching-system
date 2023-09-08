@@ -7,6 +7,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.users
 import anvil.server
+import re
 
 def go_to_admin_page(self, **event_args):
         user = anvil.users.login_with_form()
@@ -28,24 +29,28 @@ class Base(BaseTemplate):
   def submit_click(self, **event_args):
     uploaded_file = self.resume.file
     if self.name_box.text is None or self.name_box.text == "":
-      self.markdown.content = "Please Enter your Name."
+      self.markdown.content = "Please Enter a valid Name."
+    elif self.email_box.text is None or self.email_box.text == "" or not re.match(r"[^@]+@[^@]+\.[^@]+", self.email_box.text):
+      self.markdown.content = "Please Enter a valid E-mail."
     elif uploaded_file is None:
       self.markdown.content = "Please Upload your Resume."
     elif self.name_box.text is None and self.name_box.text is None:
       self.markdown.content = "Please Enter your Details."
     else:
     # if self.name_box.text is not None and self.name_box.text is not None:
-      processed_data = anvil.server.call('process_candidate', self.name_box.text, uploaded_file)
+      processed_data = anvil.server.call('process_candidate', self.name_box.text,self.email_box.text, uploaded_file)
     # Add the processed data to the 'Candidates' data table
-      app_tables.all_candidates.add_row(
+      app_tables.candidates.add_row(
         name=processed_data.get('name', ''),
+        email=processed_data.get('email', ''),
         passout=int(processed_data.get('passout', '')),
         uid=processed_data.get('uid', ''),
         university=processed_data.get('university', ''),
         grades=float(processed_data.get('grades', 0)),
         resume = uploaded_file,
         skills=processed_data.get('skills', '[]'),  # Store as a JSON string
-        domains=processed_data.get('domains', '[]')  # Store as a JSON string
+        domains=processed_data.get('domains', '[]'),  # Store as a JSON string
+        allotted=False
       )
       print(processed_data)
       self.markdown.content = "Submitted!"

@@ -48,9 +48,24 @@ db_schema:
   projects:
     client: none
     server: full
-    columns: []
+    columns:
+    - name: uid
+      type: string
+      admin_ui: {width: 200, order: 0}
+    - name: title
+      type: string
+      admin_ui: {width: 200, order: 1}
+    - name: domains
+      admin_ui: {order: 2, width: 200}
+      type: simpleObject
+    - name: skills
+      type: simpleObject
+      admin_ui: {width: 200, order: 3}
+    - name: allotted
+      type: bool
+      admin_ui: {width: 200, order: 4}
     title: Projects
-  all_candidates:
+  candidates:
     client: full
     server: full
     columns:
@@ -78,6 +93,12 @@ db_schema:
     - name: domains
       admin_ui: {order: 8, width: 200}
       type: simpleObject
-    title: All_Candidates
+    - name: allotted
+      admin_ui: {order: 9, width: 200}
+      type: bool
+    - name: email
+      type: string
+      admin_ui: {width: 200, order: 10}
+    title: Candidates
 uplink_visible: true
 renamed: true
