@@ -64,6 +64,12 @@ db_schema:
     - name: allotted
       type: bool
       admin_ui: {width: 200, order: 4}
+    - name: extras
+      type: string
+      admin_ui: {width: 200, order: 5}
+    - name: brief
+      type: media
+      admin_ui: {width: 200, order: 6}
     title: Projects
   candidates:
     client: full
