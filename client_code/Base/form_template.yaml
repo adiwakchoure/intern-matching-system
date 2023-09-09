@@ -1,7 +1,7 @@
+properties: []
 is_package: true
-container:
-  type: HtmlTemplate
-  properties: {html: '@theme:standard-page.html'}
+events: []
+custom_component: false
 components:
 - type: ColumnPanel
   properties: {col_widths: '{}'}
@@ -101,3 +101,6 @@ components:
   name: label_1
   layout_properties: {slot: title}
   event_bindings: {}
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}
