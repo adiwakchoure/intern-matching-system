@@ -56,7 +56,8 @@ class Base(BaseTemplate):
       uploaded = anvil.server.call('upload_candidate', processed_data)
       print(uploaded)
       self.markdown.content = "Submitted!"
-      open_form('Quiz')
+      quiz_form = QuizForm(data_dict)
+      open_form(quiz_form)
   
   def resume_change(self, file, **event_args):
     """This method is called when a new file is loaded into this FileLoader"""
