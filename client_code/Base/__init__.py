@@ -56,7 +56,7 @@ class Base(BaseTemplate):
       uploaded = anvil.server.call('upload_candidate', processed_data)
       print(uploaded)
       self.markdown.content = "Submitted!"
-      open_form('Quiz')
+      open_form('Quiz',processed_data)
       
   
   def resume_change(self, file, **event_args):

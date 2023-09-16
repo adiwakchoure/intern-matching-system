@@ -17,7 +17,7 @@ components:
   layout_properties: {grid_position: 'RPQFDG,MIGNKZ'}
 - type: Label
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: Question Answering, font_size: null, font: '', spacing_above: small, icon_align: left,
+    text: Pop Quiz, font_size: null, font: '', spacing_above: small, icon_align: left,
     spacing_below: small, italic: false, background: '', bold: false, underline: false,
     icon: ''}
   name: label_2
@@ -28,89 +28,125 @@ components:
   layout_properties: {grid_position: 'TPZBNO,WVAWYT'}
 - type: Label
   properties: {}
-  name: question
+  name: question1
   layout_properties: {grid_position: 'EUPEPS,VSXIDC'}
 - type: RadioButton
-  properties: {text: radio_button_1}
-  name: radio_button_1
+  properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+    enabled: true, foreground: '', value: '', visible: true, text: '', font_size: null,
+    font: '', spacing_above: small, spacing_below: small, italic: false, background: '',
+    bold: false, group_name: q1, underline: false}
+  name: r11
   layout_properties: {grid_position: 'ADCIIK,BMYYDR'}
   event_bindings: {clicked: radio_button_1_clicked}
 - type: RadioButton
-  properties: {text: radio_button_1}
-  name: radio_button_1_copy
+  properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+    enabled: true, foreground: '', value: '', visible: true, text: '', font_size: null,
+    font: '', spacing_above: small, spacing_below: small, italic: false, background: '',
+    bold: false, group_name: q1, underline: false}
+  name: r12
   layout_properties:
     col_widths: {}
     grid_position: AFAWRU,HOWEII
 - type: RadioButton
-  properties: {text: radio_button_1}
-  name: radio_button_1_copy_2
+  properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+    enabled: true, foreground: '', value: '', visible: true, text: '', font_size: null,
+    font: '', spacing_above: small, spacing_below: small, italic: false, background: '',
+    bold: false, group_name: q1, underline: false}
+  name: r13
   layout_properties:
     col_widths: {}
     grid_position: RPYOAJ,RQVMXD
 - type: RadioButton
-  properties: {text: radio_button_1}
-  name: radio_button_1_copy_3
+  properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+    enabled: true, foreground: '', value: '', visible: true, text: '', font_size: null,
+    font: '', spacing_above: small, spacing_below: small, italic: false, background: '',
+    bold: false, group_name: q1, underline: false}
+  name: r14
   layout_properties:
     col_widths: {}
     grid_position: TBYPUE,JXSZNM
 - type: Label
   properties: {}
-  name: question_copy
+  name: question2
   layout_properties:
     col_widths: {}
-    grid_position: KDTAQC,ZDOQSN
+    grid_position: WYQAQL,KIEIKM
 - type: RadioButton
-  properties: {text: radio_button_1}
-  name: radio_button_1_copy_4
+  properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+    enabled: true, foreground: '', value: '', visible: true, text: '', font_size: null,
+    font: '', spacing_above: small, spacing_below: small, italic: false, background: '',
+    bold: false, group_name: q2, underline: false}
+  name: r21
   layout_properties:
     col_widths: {}
-    grid_position: XVWQHG,WHZGDB
+    grid_position: EGDPXL,PJGZGP
 - type: RadioButton
-  properties: {text: radio_button_1}
-  name: radio_button_1_copy_5
+  properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+    enabled: true, foreground: '', value: '', visible: true, text: '', font_size: null,
+    font: '', spacing_above: small, spacing_below: small, italic: false, background: '',
+    bold: false, group_name: q2, underline: false}
+  name: r22
   layout_properties:
     col_widths: {}
-    grid_position: XMJNYY,FMKRSA
+    grid_position: JOSASU,CPFWOR
 - type: RadioButton
-  properties: {text: radio_button_1}
-  name: radio_button_1_copy_6
+  properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+    enabled: true, foreground: '', value: '', visible: true, text: '', font_size: null,
+    font: '', spacing_above: small, spacing_below: small, italic: false, background: '',
+    bold: false, group_name: q1, underline: false}
+  name: r23
   layout_properties:
     col_widths: {}
-    grid_position: MTQRZY,RAPFKT
+    grid_position: YUMYFR,DSQGJG
 - type: RadioButton
-  properties: {text: radio_button_1}
-  name: radio_button_1_copy_7
+  properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+    enabled: true, foreground: '', value: '', visible: true, text: '', font_size: null,
+    font: '', spacing_above: small, spacing_below: small, italic: false, background: '',
+    bold: false, group_name: q1, underline: false}
+  name: r24
   layout_properties:
     col_widths: {}
-    grid_position: CGEVHM,PSPWFN
+    grid_position: ZXEIOC,XQFLYF
 - type: Label
   properties: {}
-  name: question_copy_2
+  name: question3
   layout_properties:
     col_widths: {}
-    grid_position: RGBVVN,LURRFG
+    grid_position: ZJVHIE,LAEDLR
 - type: RadioButton
-  properties: {text: radio_button_1}
-  name: radio_button_1_copy_8
+  properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+    enabled: true, foreground: '', value: '', visible: true, text: '', font_size: null,
+    font: '', spacing_above: small, spacing_below: small, italic: false, background: '',
+    bold: false, group_name: q3, underline: false}
+  name: r31
   layout_properties:
     col_widths: {}
-    grid_position: ANHWQD,NBXTUZ
+    grid_position: KCQEGQ,TWNTET
 - type: RadioButton
-  properties: {text: radio_button_1}
-  name: radio_button_1_copy_9
+  properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+    enabled: true, foreground: '', value: '', visible: true, text: '', font_size: null,
+    font: '', spacing_above: small, spacing_below: small, italic: false, background: '',
+    bold: false, group_name: q3, underline: false}
+  name: r32
   layout_properties:
     col_widths: {}
-    grid_position: RMMQMT,ITBAXO
+    grid_position: UAQRYK,CQITMN
 - type: RadioButton
-  properties: {text: radio_button_1}
-  name: radio_button_1_copy_10
+  properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+    enabled: true, foreground: '', value: '', visible: true, text: '', font_size: null,
+    font: '', spacing_above: small, spacing_below: small, italic: false, background: '',
+    bold: false, group_name: q3, underline: false}
+  name: r33
   layout_properties:
     col_widths: {}
-    grid_position: GCDSLA,UQPSOP
+    grid_position: LXKDNM,YPHZRV
 - type: RadioButton
-  properties: {text: radio_button_1}
-  name: radio_button_1_copy_11
+  properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+    enabled: true, foreground: '', value: '', visible: true, text: '', font_size: null,
+    font: '', spacing_above: small, spacing_below: small, italic: false, background: '',
+    bold: false, group_name: q3, underline: false}
+  name: r34
   layout_properties:
     col_widths: {}
-    grid_position: ZPVMKV,GAZGSK
+    grid_position: KNHUEO,OJCVEX
 is_package: true

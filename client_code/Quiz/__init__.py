@@ -1,4 +1,4 @@
-from ._anvil_designer import QuizTemplate
+rom ._anvil_designer import QuizTemplate
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -20,4 +20,9 @@ class Quiz(QuizTemplate):
   def radio_button_1_clicked(self, **event_args):
     """This method is called when this radio button is selected"""
     passpasspass
+
+  def radio_button_1_copy_6_clicked(self, **event_args):
+    """This method is called when this radio button is selected"""
+    pass
+
 
