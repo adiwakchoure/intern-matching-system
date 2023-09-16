@@ -27,7 +27,7 @@ class Add_Projects(Add_ProjectsTemplate):
       open_form('Admin')
 
   def submit_click(self, **event_args):
-    uploaded_file = self.brief.file
+    uploaded_file = self.doc.file
     if self.title_box.text is None or self.title_box.text == "":
       self.markdown.content = "Please Enter a valid Title."
     elif uploaded_file is None:
@@ -40,7 +40,7 @@ class Add_Projects(Add_ProjectsTemplate):
         uid=processed_data.get('uid', ''),
         title=processed_data.get('title', ''),
         instructions=processed_data.get('instructions', ''),
-        brief = uploaded_file,
+        doc = uploaded_file,
         skills=processed_data.get('skills', '[]'),  # Store as a JSON string
         domains=processed_data.get('domains', '[]'),  # Store as a JSON string
         allotted=False

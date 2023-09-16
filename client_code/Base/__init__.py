@@ -7,6 +7,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.users
 import anvil.server
+from ..Quiz import Quiz
 import re
 
 def go_to_admin_page(self, **event_args):
@@ -56,7 +57,7 @@ class Base(BaseTemplate):
       uploaded = anvil.server.call('upload_candidate', processed_data)
       print(uploaded)
       self.markdown.content = "Submitted!"
-      open_form('Quiz',processed_data)
+      open_form('Quiz',student_id=processed_data["uid"])
       
   
   def resume_change(self, file, **event_args):

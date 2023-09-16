@@ -15,6 +15,14 @@ components:
   properties: {height: 32}
   name: spacer_1
   layout_properties: {grid_position: 'RPQFDG,MIGNKZ'}
+- type: Button
+  properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+    foreground: '', visible: true, text: props_check, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+    underline: false, icon: ''}
+  name: button_1
+  layout_properties: {grid_position: 'RPQFDG,KROMIZ'}
+  event_bindings: {click: button_1_click}
 - type: Label
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
     text: Pop Quiz, font_size: null, font: '', spacing_above: small, icon_align: left,

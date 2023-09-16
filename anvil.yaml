@@ -13,7 +13,7 @@ services:
 - source: /runtime/services/google.yml
   client_config: {}
   server_config: {}
-startup: {type: form, module: Base}
+startup: {type: form, module: Quiz}
 package_name: Intern_Matching_System
 allow_embedding: false
 name: Intern Matching System
@@ -67,9 +67,9 @@ db_schema:
     - name: instructions
       admin_ui: {order: 5, width: 200}
       type: string
-    - name: brief
+    - name: doc
+      admin_ui: {order: 6, width: 200}
       type: media
-      admin_ui: {width: 200, order: 6}
     title: Projects
   candidates:
     client: full
@@ -113,18 +113,26 @@ db_schema:
     - name: uid
       type: string
       admin_ui: {width: 200, order: 0}
-    - name: question
-      type: string
-      admin_ui: {width: 200, order: 1}
-    - name: right
-      type: string
-      admin_ui: {width: 200, order: 2}
-    - name: wrong
-      type: string
-      admin_ui: {width: 200, order: 3}
     - name: project-uid
       type: string
       admin_ui: {width: 200, order: 4}
+    - name: question
+      admin_ui: {order: -1, width: 200}
+      type: string
+    - name: options
+      type: simpleObject
+      admin_ui: {width: 200, order: 5}
     title: Questions
+  qna:
+    client: none
+    server: full
+    columns:
+    - name: student-uid
+      type: string
+      admin_ui: {width: 200, order: 0}
+    - name: project-uid
+      type: string
+      admin_ui: {width: 200, order: 1}
+    title: QnA
 uplink_visible: true
 renamed: true
