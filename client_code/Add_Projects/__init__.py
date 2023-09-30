@@ -8,6 +8,7 @@ from anvil.tables import app_tables
 import anvil.users
 import anvil.server
 import re
+import time
 
 def go_to_admin_page(self, **event_args):
   user = anvil.users.login_with_form()
@@ -27,6 +28,8 @@ class Add_Projects(Add_ProjectsTemplate):
       open_form('Admin')
 
   def submit_click(self, **event_args):
+    user = anvil.users.get_user()
+    email = user['email']
     uploaded_file = self.doc.file
     if self.title_box.text is None or self.title_box.text == "":
       self.markdown.content = "Please Enter a valid Title."
@@ -43,11 +46,14 @@ class Add_Projects(Add_ProjectsTemplate):
         doc = uploaded_file,
         skills=processed_data.get('skills', '[]'),  # Store as a JSON string
         domains=processed_data.get('domains', '[]'),  # Store as a JSON string
-        allotted=False
+        allotted=False,
+        owner = email
       )
       print(processed_data)
+      
       self.markdown.content = "Submitted!"
-      # open_form('View_Candidates')
+      time.sleep(2)
+      open_form('Admin')
 
   def resume_change(self, file, **event_args):
     """This method is called when a new file is loaded into this FileLoader"""
