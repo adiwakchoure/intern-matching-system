@@ -116,9 +116,6 @@ db_schema:
     - name: project-uid
       type: string
       admin_ui: {width: 200, order: 4}
-    - name: question
-      admin_ui: {order: -1, width: 200}
-      type: string
     - name: options
       type: simpleObject
       admin_ui: {width: 200, order: 5}

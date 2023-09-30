@@ -21,6 +21,7 @@ class Quiz(QuizTemplate):
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
     self.label_2.text=dict(app_tables.candidates.get(uid=self.student_id))["skills"]
+    self.label_2.text=dict(app_tables.candidates.get(uid=self.student_id))["skills"]
     pass
 
 
