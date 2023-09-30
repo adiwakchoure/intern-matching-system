@@ -61,7 +61,7 @@ components:
       underline: false
       multiple: false
       icon: fa:upload
-    name: brief
+    name: doc
     layout_properties: {grid_position: 'BRTNTQ,UPFUVE'}
     event_bindings: {change: resume_change}
   - type: Button

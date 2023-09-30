@@ -13,7 +13,7 @@ services:
 - source: /runtime/services/google.yml
   client_config: {}
   server_config: {}
-startup: {type: form, module: Quiz}
+startup: {type: form, module: Add_Projects}
 package_name: Intern_Matching_System
 allow_embedding: false
 name: Intern Matching System
@@ -107,18 +107,21 @@ db_schema:
       admin_ui: {width: 200, order: 10}
     title: Candidates
   questions:
-    client: none
+    client: full
     server: full
     columns:
     - name: uid
+      admin_ui: {order: -1.25, width: 200}
       type: string
-      admin_ui: {width: 200, order: 0}
-    - name: project-uid
+    - name: pid
+      admin_ui: {order: -1, width: 200}
       type: string
-      admin_ui: {width: 200, order: 4}
     - name: options
+      admin_ui: {order: -1.5, width: 200}
       type: simpleObject
-      admin_ui: {width: 200, order: 5}
+    - name: question
+      admin_ui: {order: -2, width: 200}
+      type: string
     title: Questions
   qna:
     client: none
