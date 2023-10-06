@@ -13,7 +13,7 @@ services:
 - source: /runtime/services/google.yml
   client_config: {}
   server_config: {}
-startup: {type: form, module: Base}
+startup: {type: form, module: Admin}
 package_name: Intern_Matching_System
 allow_embedding: false
 name: Intern Matching System

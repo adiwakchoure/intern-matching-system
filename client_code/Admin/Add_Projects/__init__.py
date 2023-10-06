@@ -10,6 +10,13 @@ import anvil.server
 import re
 import time
 
+new_panel = Form2()
+
+# The top-level form has a component called
+# column_panel. Clear it and put a new Form2() panel there:
+get_open_form().content_panel.clear()
+get_open_form().content_panel.add_component(new_panel)
+
 def go_to_admin_page(self, **event_args):
   user = anvil.users.login_with_form()
   if user is not None and user['email']=="admin@admin.com":

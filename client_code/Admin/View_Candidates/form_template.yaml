@@ -33,7 +33,7 @@ components:
     layout_properties: {grid_position: 'VJGCSJ,KRBDXJ'}
     components:
     - type: RepeatingPanel
-      properties: {spacing_above: none, spacing_below: none, item_template: View_Candidates.RowTemplate2}
+      properties: {spacing_above: none, spacing_below: none, item_template: Admin.View_Candidates.RowTemplate2}
       name: repeating_panel_1
       layout_properties: {}
 - type: FlowPanel
