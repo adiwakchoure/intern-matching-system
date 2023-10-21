@@ -1,0 +1,21 @@
+container: {type: DataRowPanel}
+components:
+- type: CheckBox
+  properties: {role: null, align: left, tooltip: '', border: '', enabled: true, foreground: '',
+    allow_indeterminate: true, visible: true, text: '', font_size: null, font: '',
+    spacing_above: small, spacing_below: small, italic: false, background: '', bold: false,
+    checked: false, underline: false}
+  name: check_box_1
+  layout_properties: {column: TCZNEU}
+  data_bindings:
+  - {property: checked, code: 'self.item[''allotted'']', writeback: false}
+- type: Link
+  properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '',
+    visible: true, text: download, font_size: null, wrap_on: mobile, font: '', col_spacing: medium,
+    spacing_above: small, icon_align: left, col_widths: '', spacing_below: small,
+    italic: false, background: '', bold: false, underline: false, icon: ''}
+  name: link_1
+  layout_properties: {column: XOADYU}
+  data_bindings:
+  - {property: url, code: 'self.item[''resume''].url'}
+is_package: true

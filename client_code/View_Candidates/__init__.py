@@ -33,13 +33,8 @@ class View_Candidates(View_CandidatesTemplate):
     # Fetch all records from the 'candidates' table
     # candidates_data = app_tables.candidates.search()
     # Set the 'items' property of the Data Grid to the fetched data
-    self.grid.items = anvil.server.call('get_candidates')
+    # self.grid.items = anvil.server.call('get_candidates')
+    self.grid.items = anvil.server.call('get_all_candidates')
 
   def admin_view_click(self, **event_args):
     open_form('Admin')
-
-  # @anvil.server.callable
-  def get_candidates(self):
-    return app_tables.candidates.search()
-
-  

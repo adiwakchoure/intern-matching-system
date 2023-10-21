@@ -12,12 +12,23 @@ components:
     properties:
       role: null
       columns:
-      - {id: BCEYMH, title: Uid, data_key: uid, $$hashKey: 'object:3808'}
-      - {id: JUWGWW, title: Name, data_key: name, $$hashKey: 'object:3804'}
-      - {id: ASUZZR, title: University, data_key: university, $$hashKey: 'object:3805'}
-      - {id: ALKKZX, title: Grades, data_key: grades, $$hashKey: 'object:3806'}
-      - {id: AHZYZC, title: Passout, data_key: passout, $$hashKey: 'object:3807'}
-      - {id: NRLATQ, title: Resume, data_key: resume, $$hashKey: 'object:3809'}
+      - {id: IKDYWU, title: Name, data_key: name, $$hashKey: 'object:2449', width: '',
+        expand: false}
+      - {id: EBKXAW, title: University, data_key: university, $$hashKey: 'object:2450',
+        width: '', expand: false}
+      - {id: PRDCQZ, title: Grades, data_key: grades, $$hashKey: 'object:2451', expand: false,
+        width: '75'}
+      - {id: NNKXEL, title: Passout, data_key: passout, $$hashKey: 'object:2452',
+        width: '75', expand: false}
+      - {id: XOADYU, title: Resume, data_key: resume, $$hashKey: 'object:2454', width: '75',
+        expand: false}
+      - {id: LTPKJL, title: Skills, data_key: skills, $$hashKey: 'object:2455', width: '200',
+        expand: false}
+      - {id: AKKPCF, title: Domains, data_key: domains, $$hashKey: 'object:2456',
+        expand: false, width: '200'}
+      - {id: TCZNEU, title: Allotted, data_key: allotted, $$hashKey: 'object:2457',
+        width: '75', expand: false}
+      - {id: RUUMHT, title: Email, data_key: email, $$hashKey: 'object:2458', width: ''}
       auto_header: true
       tooltip: ''
       border: ''
@@ -30,25 +41,16 @@ components:
       spacing_below: small
       background: ''
     name: datagrid
-    layout_properties: {grid_position: 'VJGCSJ,KRBDXJ'}
+    layout_properties: {grid_position: 'SHBJFQ,HZKRBC'}
     components:
     - type: RepeatingPanel
-      properties: {spacing_above: none, spacing_below: none, item_template: View_Candidates.RowTemplate2}
-      name: repeating_panel_1
+      properties: {role: null, tooltip: '', border: '', foreground: '', items: null,
+        visible: true, spacing_above: none, spacing_below: none, item_template: View_Candidates.RowTemplate4,
+        background: ''}
+      name: grid
       layout_properties: {}
-  - type: DataGrid
-    properties:
-      columns:
-      - {id: IFOWPA, title: Column 1, data_key: column_1}
-      - {id: OINTVW, title: Column 2, data_key: column_2}
-      - {id: IPXYXJ, title: Column 3, data_key: column_3}
-    name: grid
-    layout_properties: {grid_position: 'TOZFAF,CZRMTK'}
-    components:
-    - type: RepeatingPanel
-      properties: {spacing_above: none, spacing_below: none, item_template: View_Candidates.RowTemplate3}
-      name: repeating_panel_2
-      layout_properties: {}
+      data_bindings: []
+    data_bindings: []
 - type: FlowPanel
   properties: {}
   name: navbar_links
