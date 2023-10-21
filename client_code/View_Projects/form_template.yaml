@@ -4,9 +4,41 @@ container:
   properties: {html: '@theme:standard-page.html'}
 components:
 - type: ColumnPanel
-  properties: {}
+  properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: mobile, col_spacing: large, spacing_above: small, col_widths: '{}', spacing_below: small,
+    background: ''}
   name: content_panel
   layout_properties: {slot: default}
+  components:
+  - type: DataGrid
+    properties:
+      role: null
+      columns:
+      - {id: JYBHXS, title: Title, data_key: title, $$hashKey: 'object:8414'}
+      - {id: DNJGTS, title: Domains, data_key: domains, $$hashKey: 'object:8415'}
+      - {id: PJKZNI, title: Skills, data_key: skills, $$hashKey: 'object:8416'}
+      - {id: ZJQJSJ, title: Allotted, data_key: allotted, $$hashKey: 'object:8417'}
+      - {id: ZTUJKD, title: Instructions, data_key: instructions, $$hashKey: 'object:8418'}
+      - {id: YKJXRM, title: Brief, data_key: doc, $$hashKey: 'object:8419'}
+      - {id: NXRNLR, title: Owner, data_key: owner, $$hashKey: 'object:8420'}
+      auto_header: true
+      tooltip: ''
+      border: ''
+      foreground: ''
+      rows_per_page: 20
+      visible: true
+      wrap_on: never
+      show_page_controls: true
+      spacing_above: small
+      spacing_below: small
+      background: ''
+    name: grid
+    layout_properties: {grid_position: 'OITIBM,TYJNFP'}
+    components:
+    - type: RepeatingPanel
+      properties: {spacing_above: none, spacing_below: none, item_template: View_Projects.RowTemplate7}
+      name: griddata
+      layout_properties: {}
 - type: FlowPanel
   properties: {}
   name: navbar_links

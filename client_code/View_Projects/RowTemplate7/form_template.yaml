@@ -1,12 +1,24 @@
 container: {type: DataRowPanel}
 components:
+- type: Label
+  properties: {}
+  name: label_1
+  layout_properties: {column: DNJGTS}
+  data_bindings:
+  - {property: text, code: '", ".join(self.item[''domains''])'}
+- type: Label
+  properties: {}
+  name: label_2
+  layout_properties: {column: PJKZNI}
+  data_bindings:
+  - {property: text, code: '", ".join(self.item[''skills''])'}
 - type: CheckBox
   properties: {role: null, align: left, tooltip: '', border: '', enabled: true, foreground: '',
-    allow_indeterminate: true, visible: true, text: '', font_size: null, font: '',
+    allow_indeterminate: false, visible: true, text: '', font_size: null, font: '',
     spacing_above: small, spacing_below: small, italic: false, background: '', bold: false,
     checked: false, underline: false}
   name: check_box_1
-  layout_properties: {column: TCZNEU}
+  layout_properties: {column: ZJQJSJ}
   data_bindings:
   - {property: checked, code: 'self.item[''allotted'']', writeback: false}
 - type: Link
@@ -15,20 +27,7 @@ components:
     spacing_above: small, icon_align: left, col_widths: '', spacing_below: small,
     italic: false, background: '', bold: false, underline: false, icon: ''}
   name: link_1
-  layout_properties: {column: XOADYU}
+  layout_properties: {column: YKJXRM}
   data_bindings:
-  - {property: url, code: 'self.item[''resume''].url'}
-  event_bindings: {click: link_1_click}
-- type: Label
-  properties: {}
-  name: label_1
-  layout_properties: {column: AKKPCF}
-  data_bindings:
-  - {property: text, code: '", ".join(self.item[''domains''])'}
-- type: Label
-  properties: {}
-  name: label_2
-  layout_properties: {column: LTPKJL}
-  data_bindings:
-  - {property: text, code: '", ".join(self.item[''skills''])'}
+  - {property: url, code: 'self.item[''doc''].url'}
 is_package: true
