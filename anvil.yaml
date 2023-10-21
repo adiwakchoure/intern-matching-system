@@ -13,7 +13,7 @@ services:
 - source: /runtime/services/google.yml
   client_config: {}
   server_config: {}
-startup: {type: form, module: View_Projects}
+startup: {type: form, module: Base}
 package_name: Intern_Matching_System
 allow_embedding: false
 name: Intern Matching System
@@ -73,6 +73,10 @@ db_schema:
     - name: owner
       admin_ui: {width: 200, order: 7}
       type: string
+    - name: questions
+      admin_ui: {width: 200, order: 8}
+      type: link_multiple
+      target: questions
     title: Projects
   candidates:
     client: full
