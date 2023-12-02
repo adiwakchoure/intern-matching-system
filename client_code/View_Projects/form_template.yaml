@@ -21,6 +21,7 @@ components:
       - {id: ZTUJKD, title: Instructions, data_key: instructions, $$hashKey: 'object:8418'}
       - {id: YKJXRM, title: Brief, data_key: doc, $$hashKey: 'object:8419'}
       - {id: NXRNLR, title: Owner, data_key: owner, $$hashKey: 'object:8420'}
+      - {id: SYBOWB, data_key: column_1, title: Questions}
       auto_header: true
       tooltip: ''
       border: ''
@@ -35,6 +36,9 @@ components:
     name: grid
     layout_properties: {grid_position: 'OITIBM,TYJNFP'}
     components:
+    - name: button_1
+      properties: {text: button_1}
+      type: Button
     - type: RepeatingPanel
       properties: {spacing_above: none, spacing_below: none, item_template: View_Projects.RowTemplate7}
       name: griddata
