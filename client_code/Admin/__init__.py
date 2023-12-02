@@ -27,6 +27,9 @@ class Admin(AdminTemplate):
   def admin_view_click(self, **event_args):
     open_form('Base')
 
+  def set_api_key_click(self, **event_args):
+    open_form('Admin.Set_Openai_Key')
+
 
 
 

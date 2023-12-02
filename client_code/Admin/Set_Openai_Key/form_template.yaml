@@ -1,0 +1,22 @@
+container: {type: ColumnPanel}
+components:
+- name: label_1
+  properties: {bold: true, align: center, text: OPENAI API KEY}
+  type: Label
+  layout_properties: {grid_position: 'YOIRHP,THFYLX'}
+- name: key_text
+  properties: {text: dggdgdgdgd}
+  type: TextBox
+  layout_properties: {grid_position: 'PDIBIE,NVNLZS'}
+- name: setKey
+  properties: {text: Set OPENAI API Key, role: outlined-button}
+  type: Button
+  layout_properties: {grid_position: 'FEHPJA,YDWABV'}
+  event_bindings: {click: setKey_click}
+- name: button_1
+  properties: {text: Return, underline: true}
+  type: Button
+  layout_properties: {grid_position: 'QQMOMX,LVBPOZ'}
+  event_bindings: {click: button_1_click}
+is_package: true
+custom_component: false
