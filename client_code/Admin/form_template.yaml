@@ -8,38 +8,47 @@ components:
   name: content_panel
   layout_properties: {slot: default}
   components:
+  - name: spacer_1
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'QTNJKZ,MQYQBZ'}
   - name: set_api_key
     properties: {text: Set OpenAI API Key, role: outlined-button}
     type: Button
-    layout_properties: {grid_position: 'MTNBXG,CTLMAJ'}
+    layout_properties: {grid_position: 'YVSPMA,JTXYMF'}
     event_bindings: {click: set_api_key_click}
+  - name: spacer_1_copy
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'NAXHBH,IIGRDP'}
   - type: Button
     properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: View Candidates, font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: 'theme:Secondary Container', bold: false, underline: false, icon: ''}
+    name: view_candidates
+    layout_properties: {grid_position: 'SNCYAT,EDYRSF'}
+    event_bindings: {click: view_candidates_click}
+  - name: spacer_1_copy_2
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'QFLBGM,LCWXLS'}
+  - type: Button
+    properties: {role: null, align: right, tooltip: '', border: '', enabled: true,
       foreground: '', visible: true, text: Add Projects, font_size: null, font: '',
       spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-      background: '', bold: false, underline: false, icon: ''}
+      background: 'theme:Secondary Container', bold: false, underline: false, icon: ''}
     name: add_projects
-    layout_properties: {grid_position: 'JBLXIS,XYFDFB'}
+    layout_properties: {grid_position: 'WJPQIG,NJQKDN'}
     event_bindings: {click: add_projects_click}
-  - name: linear_panel_1
-    properties: {}
-    type: LinearPanel
-    layout_properties: {grid_position: 'ERETVO,UDFCAT'}
-    components:
-    - type: Button
-      properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-        foreground: '', visible: true, text: View Projects, font_size: null, font: '',
-        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '', bold: false, underline: false, icon: ''}
-      name: view_projects
-      event_bindings: {click: view_projects_click}
-    - type: Button
-      properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-        foreground: '', visible: true, text: View Candidates, font_size: null, font: '',
-        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '', bold: false, underline: false, icon: ''}
-      name: view_candidates
-      event_bindings: {click: view_candidates_click}
+  - type: Button
+    properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: View Projects, font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: 'theme:Secondary Container', bold: false, underline: false, icon: ''}
+    name: view_projects
+    layout_properties: {grid_position: 'WJPQIG,WBDFRG'}
+    event_bindings: {click: view_projects_click}
 - type: FlowPanel
   properties: {}
   name: navbar_links

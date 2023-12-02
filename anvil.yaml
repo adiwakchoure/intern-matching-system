@@ -13,7 +13,7 @@ services:
 - source: /runtime/services/google.yml
   client_config: {}
   server_config: {}
-startup: {type: form, module: View_Projects}
+startup: {type: form, module: Base}
 package_name: Intern_Matching_System
 allow_embedding: false
 name: Intern Matching System
@@ -23,7 +23,7 @@ metadata: {title: Intern Matching System, logo_img: 'asset:jk0VO1P4_400x400.jpg'
 startup_form: null
 db_schema:
   users:
-    client: none
+    client: full
     server: full
     columns:
     - name: email
