@@ -1,0 +1,72 @@
+is_package: true
+container: {type: DataRowPanel}
+components:
+- name: label_1
+  properties: {}
+  type: Label
+  layout_properties: {column: VJQQOR}
+- name: label_3
+  properties: {}
+  type: Label
+  layout_properties: {column: NBIMCL}
+- name: label_4
+  properties: {}
+  type: Label
+  layout_properties: {column: JKHFWH}
+- name: label_2
+  properties: {}
+  type: Label
+  layout_properties: {column: OJLQEN}
+- name: text_box_2
+  properties: {placeholder: Edit here}
+  type: TextBox
+  layout_properties: {column: OJLQEN}
+- name: text_box_3
+  properties: {placeholder: Edit here}
+  type: TextBox
+  layout_properties: {column: NBIMCL}
+- name: text_box_4
+  properties: {placeholder: Edit here}
+  type: TextBox
+  layout_properties: {column: JKHFWH}
+- name: label_5
+  properties: {}
+  type: Label
+  layout_properties: {column: JKSDUP}
+- name: text_box_5
+  properties: {placeholder: Edit here}
+  type: TextBox
+  layout_properties: {column: JKSDUP}
+  event_bindings: {pressed_enter: text_box_5_pressed_enter}
+- name: grid_panel_1
+  properties: {}
+  type: GridPanel
+  layout_properties: {column: PBGHUR}
+  components: []
+- name: save_button
+  properties: {text: Save Edits}
+  type: Button
+  layout_properties: {column: PBGHUR}
+  event_bindings: {click: save_button_click}
+- name: text_box_1
+  properties: {placeholder: Edit here, visible: true, enabled: true}
+  type: TextBox
+  layout_properties: {column: VJQQOR}
+  data_bindings: []
+  event_bindings: {pressed_enter: text_box_1_pressed_enter}
+- name: check_box_1
+  properties: {text: check_box_1}
+  type: CheckBox
+  layout_properties: {column: VJQQOR}
+- name: check_box_3
+  properties: {text: check_box_3}
+  type: CheckBox
+  layout_properties: {column: NBIMCL}
+- name: check_box_2
+  properties: {text: check_box_2}
+  type: CheckBox
+  layout_properties: {column: OJLQEN}
+- name: check_box_4
+  properties: {text: check_box_4}
+  type: CheckBox
+  layout_properties: {column: JKHFWH}

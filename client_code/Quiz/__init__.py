@@ -9,7 +9,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 
 class Quiz(QuizTemplate):
-  def __init__(self, student_id='0650006c-13ce-7ff8-8000-12500edbb856', **properties):
+  def __init__(self, student_id='06517cd7-055a-712e-8000-ac402eeb31af', **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.student_id = student_id
@@ -17,6 +17,8 @@ class Quiz(QuizTemplate):
     # print(candidate_row)
     # print(student_id)
     # Any code you write here will run before the form opens.
+    total_time = 15
+    alert(f"You have a total of {total_time} seconds to answer 3 the questions. There may be multiple right answers each. The quiz will auto-submit in {total_time} seconds")
 
     skills = dict(app_tables.candidates.get(uid=self.student_id))["skills"]
     pid = anvil.server.call('project_search', "skills", str(skills))
@@ -40,6 +42,7 @@ class Quiz(QuizTemplate):
     self.r33.text = self.questions_data[2]['options'][2]['option']
     self.r34.text = self.questions_data[2]['options'][3]['option']
 
+    self.time_remaining = 20
 
   def submit_click(self, **event_args):
     score = 0
@@ -115,8 +118,15 @@ class Quiz(QuizTemplate):
       score = score,
       response = response
       )
-    
+     # Stop the timer when manually submitting
     open_form('Result',score=score)
+
+  def timer_1_tick(self, **event_args):
+    """This method is called Every [interval] seconds. Does not trigger if [interval] is 0."""
+    self.time_remaining -= 1
+    if self.time_remaining <= 0:
+        self.submit_click()  # Submit the quiz when time is up
+    pass
 
   
 
