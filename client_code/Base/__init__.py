@@ -24,7 +24,11 @@ class Base(BaseTemplate):
 
   def admin_view_click(self, **event_args):
     user = anvil.users.login_with_form()
-    if user is not None and user['confirmed_email']:
+    # if not user['confirmed_email']:
+    #   alert("Please confirm registration via email!")
+    # if user is not None and user['confirmed_email']:
+    #   open_form('Admin')
+    if user is not None:
       open_form('Admin')
 
   def submit_click(self, **event_args):

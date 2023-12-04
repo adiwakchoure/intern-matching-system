@@ -19,8 +19,9 @@ components:
       - {id: PJKZNI, title: Skills, data_key: skills, $$hashKey: 'object:8416'}
       - {id: ZJQJSJ, title: Allotted, data_key: allotted, $$hashKey: 'object:8417'}
       - {id: ZTUJKD, title: Instructions, data_key: instructions, $$hashKey: 'object:8418'}
-      - {id: YKJXRM, title: Brief, data_key: doc, $$hashKey: 'object:8419'}
+      - {id: YKJXRM, title: 'Document ', data_key: doc, $$hashKey: 'object:8419'}
       - {id: SYBOWB, data_key: column_1, title: Questions}
+      - {id: VXDHCJ, data_key: column_1, title: Delete}
       auto_header: true
       tooltip: ''
       border: ''

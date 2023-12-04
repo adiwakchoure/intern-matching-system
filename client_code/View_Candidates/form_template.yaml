@@ -28,8 +28,6 @@ components:
         expand: false}
       - {id: AKKPCF, title: Domains, data_key: domains, $$hashKey: 'object:2456',
         expand: false, width: '200'}
-      - {id: TCZNEU, title: Allotted, data_key: allotted, $$hashKey: 'object:2457',
-        width: '75', expand: false}
       - {id: RUUMHT, title: Email, data_key: email, $$hashKey: 'object:2458', width: ''}
       auto_header: true
       tooltip: ''

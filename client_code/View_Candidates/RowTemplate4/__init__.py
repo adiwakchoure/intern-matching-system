@@ -22,5 +22,3 @@ class RowTemplate4(RowTemplate4Template):
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""
     pass
-
-

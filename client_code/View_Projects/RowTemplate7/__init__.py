@@ -20,6 +20,25 @@ class RowTemplate7(RowTemplate7Template):
     open_form('View_Questions',pid=self.item['uid'])
     pass
 
+  def delete_button_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    
+    # Confirm before deleting
+    if confirm("Are you sure you want to delete this project?"):
+      # Fetch the project record using its uid
+      project_to_delete = app_tables.projects.get(uid=self.item['uid'])
+
+      if project_to_delete:
+        # Delete the project record
+        project_to_delete.delete()
+  
+        alert("Project deleted successfully!")
+  
+        # Optionally, refresh the data or redirect to another form if needed
+        open_form('View_Projects')
+      else:
+        alert("Error: Project not found.")
+
   def outlined_button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('View_Questions',pid=self.item['uid'])
