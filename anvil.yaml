@@ -8,7 +8,7 @@ services:
   server_config: {}
 - source: /runtime/services/anvil/users.yml
   client_config: {allow_signup: true, enable_automatically: true, use_email: true,
-    confirm_email: true, use_google: true, allow_remember_me: true, remember_me_days: 7}
+    confirm_email: true, use_google: true, allow_remember_me: false, remember_me_days: 7}
   server_config: {user_table: users}
 - source: /runtime/services/google.yml
   client_config: {}
@@ -97,9 +97,6 @@ db_schema:
     - name: university
       type: string
       admin_ui: {width: 200, order: 1}
-    - name: grades
-      type: number
-      admin_ui: {width: 200, order: 2}
     - name: passout
       type: number
       admin_ui: {width: 200, order: 4}

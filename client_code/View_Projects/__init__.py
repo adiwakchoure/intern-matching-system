@@ -34,7 +34,9 @@ class View_Projects(View_ProjectsTemplate):
     # candidates_data = app_tables.candidates.search()
     # Set the 'items' property of the Data Grid to the fetched data
     # self.grid.items = anvil.server.call('get_candidates')
-    self.griddata.items = anvil.server.call('get_all_projects')
+    user = anvil.users.get_user()
+    user_email = user['email']
+    self.griddata.items = app_tables.projects.search(owner=user_email)
 
   def admin_view_click(self, **event_args):
     open_form('Admin')
