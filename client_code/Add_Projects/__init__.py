@@ -37,6 +37,7 @@ class Add_Projects(Add_ProjectsTemplate):
       self.markdown.content = "Please Upload a Brief (docx)."
     else:
     # if self.name_box.text is not None and self.name_box.text is not None:
+      print(anvil.users.get_user()['api_key'])
       processed_data = anvil.server.call('process_project', self.title_box.text,self.instructions_box.text, uploaded_file)
     # Add the processed data to the 'Candidates' data table
       app_tables.projects.add_row(
