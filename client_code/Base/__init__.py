@@ -49,7 +49,6 @@ class Base(BaseTemplate):
       app_tables.candidates.add_row(
         name=self.name_box.text,
         email=self.email_box.text,
-        passout=int(processed_data.get('passout', '')),
         uid=processed_data.get('uid', ''),
         university=processed_data.get('university', ''),
         resume = uploaded_file,

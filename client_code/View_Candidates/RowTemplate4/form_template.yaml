@@ -1,4 +1,6 @@
-container: {type: DataRowPanel}
+container:
+  type: DataRowPanel
+  properties: {align: left}
 components:
 - type: Link
   properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '',
@@ -22,4 +24,8 @@ components:
   layout_properties: {column: LTPKJL}
   data_bindings:
   - {property: text, code: '", ".join(self.item[''skills''])'}
+- name: score_label
+  properties: {}
+  type: Label
+  layout_properties: {column: NTCQOF}
 is_package: true

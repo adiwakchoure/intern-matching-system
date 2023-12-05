@@ -97,9 +97,6 @@ db_schema:
     - name: university
       type: string
       admin_ui: {width: 200, order: 1}
-    - name: passout
-      type: number
-      admin_ui: {width: 200, order: 4}
     - name: uid
       type: string
       admin_ui: {width: 200, order: 5}

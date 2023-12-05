@@ -14,21 +14,18 @@ components:
     properties:
       role: null
       columns:
-      - {id: IKDYWU, title: Name, data_key: name, $$hashKey: 'object:2449', width: '',
+      - {id: IKDYWU, title: Name, data_key: name, $$hashKey: 'object:2449', width: 105,
         expand: false}
       - {id: EBKXAW, title: University, data_key: university, $$hashKey: 'object:2450',
-        width: '', expand: false}
-      - {id: PRDCQZ, title: Grades, data_key: grades, $$hashKey: 'object:2451', expand: false,
-        width: '75'}
-      - {id: NNKXEL, title: Passout, data_key: passout, $$hashKey: 'object:2452',
-        width: '75', expand: false}
+        width: 114, expand: false}
       - {id: XOADYU, title: Resume, data_key: resume, $$hashKey: 'object:2454', width: '75',
         expand: false}
-      - {id: LTPKJL, title: Skills, data_key: skills, $$hashKey: 'object:2455', width: '200',
+      - {id: LTPKJL, title: Skills, data_key: skills, $$hashKey: 'object:2455', width: 223,
         expand: false}
       - {id: AKKPCF, title: Domains, data_key: domains, $$hashKey: 'object:2456',
         expand: false, width: '200'}
       - {id: RUUMHT, title: Email, data_key: email, $$hashKey: 'object:2458', width: ''}
+      - {id: NTCQOF, data_key: column_1, title: Score}
       auto_header: true
       tooltip: ''
       border: ''
