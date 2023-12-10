@@ -12,8 +12,12 @@ class RowTemplate4(RowTemplate4Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    score = app_tables.answers.get(student_id=self.item['uid'])['score']
-    self.score_label.text = f"{(score/12)*100:.2f}%"
+    try:
+      score = app_tables.answers.get(student_id=self.item['uid'])['score']
+      self.score_label.text = f"{(score/12)*100:.2f}%"
+    except:
+      self.score_label.text = "N/A"
+    
 
     # Any code you write here will run before the form opens.
 

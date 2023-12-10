@@ -30,9 +30,14 @@ class RowTemplate7(RowTemplate7Template):
 
       if project_to_delete:
         # Delete the project record
+        anvil.server.call("delete_project",self.item['uid'])
+        alert("De-indexed Project!")
         project_to_delete.delete()
-  
         alert("Project deleted successfully!")
+        questions = app_tables.questions.search(pid=self.item['uid'])
+        for q in questions:
+          q.delete()
+        alert("Questions deleted successfully!")
   
         # Optionally, refresh the data or redirect to another form if needed
         open_form('View_Projects')

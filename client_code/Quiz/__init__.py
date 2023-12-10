@@ -9,7 +9,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 
 class Quiz(QuizTemplate):
-  def __init__(self, student_id='06517cd7-055a-712e-8000-ac402eeb31af', **properties):
+  def __init__(self, student_id='065762fd-4f7a-76e2-8000-54281f2b24c6', **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.student_id = student_id
@@ -18,11 +18,12 @@ class Quiz(QuizTemplate):
     # print(student_id)
     # Any code you write here will run before the form opens.
     total_time = 15
-    alert(f"You have a total of {total_time} seconds to answer 3 the questions. There may be multiple right answers each. The quiz will auto-submit in {total_time} seconds")
+    # alert(f"You have a total of {total_time} seconds to answer 3 the questions. There may be multiple right answers each. The quiz will auto-submit in {total_time} seconds")
 
     skills = dict(app_tables.candidates.get(uid=self.student_id))["skills"]
     pid = anvil.server.call('project_search', "skills", str(skills))
-    self.questions_data = app_tables.questions.search(pid=pid)
+    alert((app_tables.questions.search(pid="0656e6bb-5afa-7974-8000-2238038fe87d")))
+    self.questions_data = app_tables.questions.search(pid="0656e6bb-5afa-7974-8000-2238038fe87d")
 
     self.question1.text = self.questions_data[0]['question']
     self.r11.text = self.questions_data[0]['options'][0]['option']

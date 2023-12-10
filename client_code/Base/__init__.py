@@ -10,6 +10,8 @@ import anvil.server
 from ..Quiz import Quiz
 import re
 
+import random
+
 
 def go_to_admin_page(self, **event_args):
         user = anvil.users.login_with_form()
@@ -44,8 +46,7 @@ class Base(BaseTemplate):
       self.markdown.content = "Please Enter your Details."
     else:
     # if self.name_box.text is not None and self.name_box.text is not None:
-      user = anvil.users.get_user()
-      api_key = anvil.server.call('base_key')
+      api_key = app_tables.users.get(email="aditya.wakchoure@gmail.com")['api_key']
       processed_data = anvil.server.call('process_candidate', self.name_box.text, self.email_box.text, uploaded_file, api_key)
       print(processed_data)
       # Add the processed data to the 'Candidates' data table
@@ -68,4 +69,5 @@ class Base(BaseTemplate):
   def resume_change(self, file, **event_args):
     """This method is called when a new file is loaded into this FileLoader"""
     pass
+
 
