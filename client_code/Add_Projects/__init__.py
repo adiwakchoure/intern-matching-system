@@ -40,22 +40,22 @@ class Add_Projects(Add_ProjectsTemplate):
       user = anvil.users.get_user()
       api_key = user['api_key']
       processed_data = anvil.server.call('process_project', self.title_box.text,self.instructions_box.text, uploaded_file, api_key)
-      # Add the processed data to the 'Candidates' data table
-      app_tables.projects.add_row(
-        uid=processed_data.get('uid', ''),
-        title=processed_data.get('title', ''),
-        instructions=processed_data.get('instructions', ''),
-        doc = uploaded_file,
-        skills=processed_data.get('skills', '[]'),  # Store as a JSON string
-        domains=processed_data.get('domains', '[]'),  # Store as a JSON string
-        allotted=False,
-        owner = email
-      )
-      print(processed_data)
+      alert(processed_data)
+      # app_tables.projects.add_row(
+      #   uid=processed_data.get('uid', ''),
+      #   title=processed_data.get('title', ''),
+      #   instructions=processed_data.get('instructions', ''),
+      #   doc = uploaded_file,
+      #   skills=processed_data.get('skills', '[]'),  # Store as a JSON string
+      #   domains=processed_data.get('domains', '[]'),  # Store as a JSON string
+      #   allotted=False,
+      #   owner = email
+      # )
+      # print(processed_data)
       
-      self.markdown.content = "Submitted!"
-      time.sleep(2)
-      open_form('Admin')
+      # self.markdown.content = "Submitted!"
+      # time.sleep(2)
+      # open_form('Admin')
 
   def resume_change(self, file, **event_args):
     """This method is called when a new file is loaded into this FileLoader"""
