@@ -40,7 +40,7 @@ class Add_Projects(Add_ProjectsTemplate):
       user = anvil.users.get_user()
       api_key = user['api_key']
       processed_data = anvil.server.call('process_project', self.title_box.text,self.instructions_box.text, uploaded_file, api_key)
-    # Add the processed data to the 'Candidates' data table
+      # Add the processed data to the 'Candidates' data table
       app_tables.projects.add_row(
         uid=processed_data.get('uid', ''),
         title=processed_data.get('title', ''),
