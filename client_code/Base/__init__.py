@@ -10,6 +10,7 @@ import anvil.server
 from ..Quiz import Quiz
 import re
 
+
 def go_to_admin_page(self, **event_args):
         user = anvil.users.login_with_form()
         if user is not None and user['email']=="admin@admin.com":
@@ -43,7 +44,9 @@ class Base(BaseTemplate):
       self.markdown.content = "Please Enter your Details."
     else:
     # if self.name_box.text is not None and self.name_box.text is not None:
-      processed_data = anvil.server.call('process_candidate', self.name_box.text, self.email_box.text, uploaded_file)
+      user = anvil.users.get_user()
+      api_key = anvil.server.call('base_key')
+      processed_data = anvil.server.call('process_candidate', self.name_box.text, self.email_box.text, uploaded_file, api_key)
       print(processed_data)
       # Add the processed data to the 'Candidates' data table
       app_tables.candidates.add_row(
