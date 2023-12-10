@@ -39,7 +39,8 @@ class Add_Projects(Add_ProjectsTemplate):
     # if self.name_box.text is not None and self.name_box.text is not None:
       user = anvil.users.get_user()
       api_key = user['api_key']
-      processed_data = anvil.server.call('process_project', self.title_box.text,self.instructions_box.text, uploaded_file, api_key)
+      alert(api_key)
+      processed_data = anvil.server.call('process_project_dev', self.title_box.text,self.instructions_box.text, uploaded_file, api_key)
       alert(processed_data)
       # app_tables.projects.add_row(
       #   uid=processed_data.get('uid', ''),
