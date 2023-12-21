@@ -11,6 +11,7 @@ from ..Quiz import Quiz
 import re
 
 import random
+alert(anvil.server.call('servercheck'))
 
 
 def go_to_admin_page(self, **event_args):
