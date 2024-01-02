@@ -34,12 +34,12 @@ class Add_Projects(Add_ProjectsTemplate):
     if self.title_box.text is None or self.title_box.text == "":
       self.markdown.content = "Please Enter a valid Title."
     elif uploaded_file is None:
-      self.markdown.content = "Please Upload a Brief (docx)."
+      self.markdown.content = "Please Upload a Brief Document."
     else:
     # if self.name_box.text is not None and self.name_box.text is not None:
       user = anvil.users.get_user()
       api_key = user['api_key']
-      processed_data = anvil.server.call('process_project', self.title_box.text,self.instructions_box.text, uploaded_file, api_key)
+      processed_data = anvil.server.call('process_project', title = self.title_box.text, file = uploaded_file, instructions = self.instructions_box.text, openai_key = api_key)
       app_tables.projects.add_row(
         uid=processed_data.get('uid', ''),
         title=processed_data.get('title', ''),
