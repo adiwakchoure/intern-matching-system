@@ -11,7 +11,7 @@ This project builds an end-to-end system for matching interns to open positions,
 ## Methodology
 1. Resume processing using open-source libraries (Unstructured IO)
 2. Cross reference resume data via embedding in two domains: "skills" and "domains" using bge-base-en-v1.5
-3. Matching candidates to positions using ANN via the Qdrant vector database
+3. Matching candidates to positions using ANN
 4. Tailored interview question generation with the Cohere reranker model
 5. Robust candidate evaluation framework
 
